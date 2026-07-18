@@ -6,10 +6,9 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model ScheduledEvent {
-  id        String   @id @default(cuid())
+model Product {
+  id        Int      @id @default(autoincrement())
   name      String
-  startTime String
-  duration  String?  // Optional field mapping
+  price     Float
   createdAt DateTime @default(now())
 }
